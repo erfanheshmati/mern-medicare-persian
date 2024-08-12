@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply py-[75px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] px-5 mx-auto;
+  }
+  .btn {
+    @apply bg-primaryColor py-3 md:py-[14px] px-6 md:px-[30px] rounded-lg text-white font-[600] mt-[30px] hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800;
+  }
+  .heading {
+    @apply text-[44px] leading-[54px] font-[700] text-headingColor dark:text-slate-300;
+  }
+  section {
+    @apply dark:bg-slate-700;
+  }
+  .text__para {
+    @apply text-[18px] leading-[25px] font-[400] text-textColor mt-3 dark:text-slate-400;
+  }
+  .header {
+    @apply bg-[url("/images/mask.png")] bg-no-repeat bg-cover w-full h-[80px] md:h-[100px] leading-[100px] dark:bg-slate-800 dark:bg-none;
+  }
+  .hero__section {
+    @apply bg-[url("/images/hero-bg.png")] bg-no-repeat bg-center bg-cover dark:bg-slate-700 dark:bg-none;
+  }
+  .footer {
+    @apply bg-[url("/images/hero-bg.png")] bg-no-repeat bg-cover dark:bg-slate-800 dark:bg-none;
+  }
+  .form__label {
+    @apply text-textColor font-semibold text-[16px] mb-2 dark:text-slate-300;
+  }
+  .form__input {
+    @apply w-full px-2 py-3 border border-solid border-[#0066ff40] focus:outline-none focus:border-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor rounded-md dark:bg-slate-500 dark:text-slate-300 dark:placeholder:text-slate-200 dark:focus:border-blue-300;
+  }
+  .pagination button {
+    @apply bg-white border-gray-300 text-gray-500 hover:!bg-gray-100 hover:!text-gray-500 disabled:!bg-white focus:!bg-primaryColor/10 focus:!text-primaryColor dark:focus:!bg-slate-500 dark:focus:!text-slate-300;
+  }
+  .swal2-custom-popup {
+    @apply rounded-lg dark:bg-slate-950 dark:text-slate-400;
+  }
+  .swal2-custom-success {
+    @apply dark:bg-slate-950 dark:text-slate-400;
+  }
+}
+
+@layer components {
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+  .no-spinner {
+    @apply appearance-none;
+  }
+  input::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    @apply w-full;
+  }
+  section {
+    @apply py-[35px];
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    @apply text-[26px] leading-[36px];
+  }
+  .text__para {
+    @apply text-[16px] leading-7 mt-3;
+  }
+}
