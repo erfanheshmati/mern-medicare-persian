@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { BsArrowRight } from "react-icons/bs"
 import starIcon from "/images/Star.png"
 import { Link } from "react-router-dom"
@@ -8,7 +9,7 @@ export default function DoctorCard({ doctor }) {
 
     return (
         <Link to={`/docs/${_id}`}>
-            <div className="border rounded-md shadow hover:cursor-pointer hover:shadow-2xl transition-all ease-in-out dark:border-slate-600">
+            <div className="hidden md:block border rounded-md shadow hover:cursor-pointer hover:shadow-2xl transition-all ease-in-out dark:border-slate-600">
                 <div>
                     <img src={photo} alt="" className="w-full h-[220px] object-cover rounded-t-md" />
                 </div>
@@ -35,7 +36,7 @@ export default function DoctorCard({ doctor }) {
                         +{totalPatients} patients
                     </h3> */}
                             <p className="text-[14px] leading-3 font-[400] text-textColor px-1 dark:text-slate-400">
-                                {experiences && experiences[0]?.hospital}
+                                بیمارستان {experiences && experiences[0]?.hospital}
                             </p>
                         </div>
                         {/* <Link
@@ -44,6 +45,43 @@ export default function DoctorCard({ doctor }) {
                     >
                         <BsArrowRight className="group-hover:text-white w-6 h-5" />
                     </Link> */}
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Card */}
+            <div className="flex items-center md:hidden border rounded-md shadow hover:cursor-pointer hover:shadow-2xl transition-all ease-in-out dark:border-slate-600">
+                <div className="w-1/3">
+                    <img src={photo} alt="" className="w-full h-[130px] object-cover rounded-r-md" />
+                </div>
+                <div className="w-2/3 space-y-3 px-3">
+                    <h2 className="text-[20px] leading-[30px] text-headingColor font-[700] dark:text-slate-300">
+                        {name}
+                    </h2>
+                    <div className="flex items-center justify-between">
+                        <span className="bg-[#ccf0f3] text-irisBlueColor px-2 py-1 text-[12px] font-semibold rounded">
+                            {specialization?.charAt(0).toUpperCase() + specialization?.slice(1) || "Empty"}
+                        </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <p className="text-[14px] font-[400] text-textColor px-1 dark:text-slate-400">
+                                بیمارستان {experiences && experiences[0]?.hospital}
+                            </p>
+                        </div>
+                        <div className="flex items-center gap-[6px]">
+                            <span>
+                                <img src={starIcon} alt="" className="h-4 w-4" />
+                            </span>
+                            <div className="flex items-center gap-1 pt-1">
+                                <span className="flex items-center text-[13px] font-semibold text-headingColor dark:text-slate-400">
+                                    {averageRating?.toFixed(1)}
+                                </span>
+                                <span className="text-[13px] font-semibold text-textColor dark:text-slate-400">
+                                    ({totalRating})
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

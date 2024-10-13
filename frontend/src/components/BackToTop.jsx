@@ -40,7 +40,7 @@ export default function BackToTop() {
     return (
         <PiArrowFatLineUpBold
             onClick={backToTop}
-            className={`${isFixed ? "fixed" : ""} left-4 bottom-4 md:left-5 xl:left-2 2xl:left-7 size-9 md:size-10 md:hover:scale-110 z-50 cursor-pointer text-blue-300 hover:text-blue-600 dark:text-blue-500/70 dark:hover:text-blue-400`}
+            className={`${isFixed ? "fixed" : ""} left-5 bottom-4 md:left-6 2xl:left-8 size-9 md:size-10 md:hover:scale-110 z-50 cursor-pointer text-blue-300 hover:text-blue-600 dark:text-blue-500/70 dark:hover:text-blue-400`}
         />
     )
 }

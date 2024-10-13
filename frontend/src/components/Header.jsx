@@ -6,7 +6,6 @@ import { useContext, useEffect, useRef } from "react"
 import { AuthContext } from "../context/AuthContext"
 import { MdOutlinePersonRemove } from "react-icons/md"
 import { MdLogout } from "react-icons/md"
-import { TbLogin } from "react-icons/tb"
 import { ThemeContext } from "../context/ThemeContext"
 import Swal from "sweetalert2"
 import { BASE_URL } from "../config.js"
@@ -173,7 +172,7 @@ export default function Header() {
                                 <div className="md:hidden absolute top-[50px]">
                                     <Link to="/login">
                                         <button className="btn flex items-center gap-1 py-[6px] px-4 rounded-lg dark:bg-blue-700 dark:hover:bg-blue-800">
-                                            <TbLogin /> ورود
+                                            ورود
                                         </button>
                                     </Link>
                                 </div>
@@ -209,7 +208,7 @@ export default function Header() {
                                         onClick={handleLogout}
                                         className="w-28 flex items-center gap-2 bg-primaryColor text-white rounded-lg py-2 px-4 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
                                     >
-                                        <MdLogout /> خروج
+                                        خروج
                                     </button>
                                 </div>
                             )}
@@ -241,7 +240,7 @@ export default function Header() {
                         ) : (
                             <Link to="/login">
                                 <button className="hidden bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] md:flex items-center gap-1 rounded-[10px] hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800">
-                                    <TbLogin /> ورود
+                                    ورود
                                 </button>
                             </Link>
                         )}

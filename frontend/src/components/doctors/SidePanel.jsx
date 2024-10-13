@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { convertTime } from "../../utils/convertTime"
 import { BASE_URL, token } from "../../config.js"
 import { toast } from "react-toastify"

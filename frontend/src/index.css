@@ -10,7 +10,7 @@
 
 @layer components {
   .container {
-    @apply max-w-full w-[1440px] px-5 mx-auto;
+    @apply max-w-7xl px-5 mx-auto;
   }
   .btn {
     @apply bg-primaryColor py-3 md:py-[14px] px-6 md:px-[30px] rounded-lg text-white font-[600] mt-[30px] hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800;
