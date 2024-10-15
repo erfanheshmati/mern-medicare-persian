@@ -30,7 +30,8 @@ const quickLinks3 = [
 ]
 
 export default function Footer() {
-    const year = new Date().getFullYear()
+    // const year = new Date().getFullYear()
+
     return (
         <footer className="py-16 footer">
             <div className="container">
@@ -39,7 +40,8 @@ export default function Footer() {
                     <div>
                         <img src={logo} alt="" className="w-14 md:w-16" />
                         <p className="text-[14px] md:text-[16px] leading-7 font-[400] text-textColor mt-4 dark:text-slate-400">
-                            &copy; طراحی و توسعه توسط عرفان حشمتی
+                            طراحی و توسعه توسط&nbsp;
+                            <Link to="https://erfanweb.vercel.app/" className="underline text-blue-500 hover:text-blue-700 dark:hover:text-blue-300">عرفان حشمتی</Link>
                         </p>
                         <div className="flex items-center gap-3 mt-4">
                             {socialLinks.map((link, index) => (
